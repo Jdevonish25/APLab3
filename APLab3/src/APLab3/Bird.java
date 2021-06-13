@@ -1,8 +1,8 @@
 package APLab3;
-
+/*
 import animals.Animal;
 import animals.AnimalBehaviour;
-
+*/
 public class Bird extends Animal implements AnimalBehaviour {
 	private String name;
 	private int numberOfLegs;
@@ -11,7 +11,7 @@ public class Bird extends Animal implements AnimalBehaviour {
 	private int numberOfWings;
 
 	public Bird(String name, int numberOfLegs, double height, double weight, int numberOfWings) {
-		super(name, numberOfLegs, height, weight);
+		//super(name, numberOfLegs, height, weight);
 		this.numberOfWings = numberOfWings;
 	}
 
