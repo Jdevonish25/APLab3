@@ -1,48 +1,85 @@
 package APLab3;
 
-public class Bird extends Animal implements AnimalBehaviour 
-{
-	private int numberofwings;
-	
+import animals.Animal;
+import animals.AnimalBehaviour;
 
-	public Bird(String name, int numberoflegs, int height, int weight, int numberofwings) 
-	{
-		super(name, numberoflegs, height, weight);
-		this.numberofwings = numberofwings;
+public class Bird extends Animal implements AnimalBehaviour {
+	private String name;
+	private int numberOfLegs;
+	private double height;
+	private double weight;
+	private int numberOfWings;
+
+	public Bird(String name, int numberOfLegs, double height, double weight, int numberOfWings) {
+		super(name, numberOfLegs, height, weight);
+		this.numberOfWings = numberOfWings;
 	}
 
-	public int getNumberofwings() 
-	{
-		return numberofwings;
+	public int getNumberOfWings() {
+		return numberOfWings;
 	}
 
-	public void setNumberofwings(int numberofwings) 
-	{
-		this.numberofwings = numberofwings;
-	}
-	
-	@Override
-	public String move()
-	{
-		return "Fly";
+	public void setNumberOfWings(int numberOfWings) {
+		this.numberOfWings = numberOfWings;
 	}
 
 	@Override
-	public String makeNoise() 
-	{
-		return "Chirp";
+	public String toString() {
+		return "Bird [numberOfWings=" + numberOfWings + ", Name=" + getName() + ", NumberOfLegs="
+				+ getNumberOfLegs() + ", Height=" + getHeight() + ", Weight=" + getWeight() + "]";
 	}
 
 	@Override
-	public void eat(String food)
-	{
-		if (food == "worms" || food == "fruits")
-		{  
-	        System.out.println("edible");  
-	    }
+	public String move() {
+		return "The bird flies";
+	}
+
+	@Override
+	public String makeNoise() {
+		return "The bird goes Tweet tweet";
+	}
+
+	@Override
+	public void eat(String food) {
+		if(food.equalsIgnoreCase("worm") || food.equalsIgnoreCase("berries") || food.equalsIgnoreCase("insects"))
+		{
+			System.out.println("Edible");	
+		}
 		else
-		{  
-	        System.out.println("inedible");  
-	    } 
+		{
+			System.out.println("Inedible");	
+		}	
+	}
+	
+	public String getName() {
+		return name;
+	}
+
+	public int getNumberOfLegs() {
+		return numberOfLegs;
+	}
+
+	public double getHeight() {
+		return height;
+	}
+
+	public double getWeight() {
+		return weight;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public void setNumberOfLegs(int numberOfLegs) {
+		this.numberOfLegs = numberOfLegs;
+	}
+
+	public void setHeight(double height) {
+		this.height = height;
+	}
+
+	public void setWeight(double weight) {
+		this.weight = weight;
 	}
 }
