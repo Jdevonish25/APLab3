@@ -1,82 +1,72 @@
 package APLab3;
 
-public class Animal 
-{
-	private String name;
-	private int numberoflegs;
-	private int height;
-	private int weight;
+import APLab3.Animal;
+
+public class Animal {
+	private String Name;
+	private int numoflegs;
+	private float height;
+	private float weight;
 	
-	public Animal()
-	{
-		name = "";
-		numberoflegs = 0;
-		height = 0;
-		weight = 0;
+	
+	public Animal() {
+		Name=" ";
+		numoflegs=0;
+		height=0;
+		weight=0;
 	}
 	
-	// four-argument Employee Constructor 
-	public Animal( String name, int numberoflegs, int height, int weight )
-	{	
-		this.name = name;
-		this.numberoflegs = numberoflegs;
-		this.height = height;
-		this.weight = weight;
-	}// end four-argument Employee constructor
+	public Animal(String Name, int numoflegs, float height, float weight) {
+		this.Name=Name;
+		this.numoflegs=numoflegs;
+		this.height=height;
+		this.weight=weight;
+		
+	}
 	
-	public Animal(Animal emp)
-	{
-		name = emp.name;
-		numberoflegs = emp.numberoflegs;
-		height = emp.height;
-		weight = emp.weight;
+	public Animal(Animal A) {
+		Name= A.Name;
+		numoflegs=A.numoflegs;
+		height=A.height;
+		weight=A.weight;
 	}
 
-	public String getName() 
-	{
-		return name;
+	public String getName() {
+		return Name;
 	}
 
-	public void setName(String name) 
-	{
-		this.name = name;
+	public void setName(String name) {
+		Name = name;
 	}
 
-	public double getNumberoflegs()
-	{
-		return numberoflegs;
+	public int getNumoflegs() {
+		return numoflegs;
 	}
 
-	public void setNumberoflegs(int numberoflegs)
-	{
-		this.numberoflegs = numberoflegs;
+	public void setNumoflegs(int numoflegs) {
+		this.numoflegs = numoflegs;
 	}
 
-	public double getHeight() 
-	{
+	public float getHeight() {
 		return height;
 	}
 
-	public void setHeight(int height) 
-	{
+	public void setHeight(float height) {
 		this.height = height;
 	}
 
-	public double getWeight() 
-	{
+	public float getWeight() {
 		return weight;
 	}
 
-	public void setWeight(int weight)
-	{
+	public void setWeight(float weight) {
 		this.weight = weight;
 	}
 
 	@Override
-	public String toString() 
-	{
-		return "Animal [name=" + name + ", numberoflegs=" + numberoflegs + ", height=" + height + ", weight=" + weight + "]";
+	public String toString() {
+		return "Animal [Name=" + Name + ", numoflegs=" + numoflegs + ", height=" + height + ", weight=" + weight + "]";
 	}
-	
+
 	
 }
