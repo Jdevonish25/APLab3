@@ -12,7 +12,7 @@ public class Bird extends Animal implements AnimalBehaviour {
 
 	public Bird(String name, int numberOfLegs, double height, double weight, int numberOfWings) {
 		super(name, numberOfLegs, height, weight);
-		this.numberOfWings = numberOfWings ;
+		this.numberOfWings = numberOfWings;
 	}
 
 	public int getNumberOfWings() {
